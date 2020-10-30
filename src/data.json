@@ -2,12 +2,12 @@
     "products": [
       {
         "_id": "dress1",
-        "image": "/images/dress1.png",
-        "title": "Bright yellow top",
+        "image": "/images/dress1.jpg",
+        "title": "Dark  flower detailed frock",
         "sex":"female",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["X", "L", "XL", "XXL"],
-        "price": 2000
+        "price": 4000
       },
       {
         "_id": "dress2",
