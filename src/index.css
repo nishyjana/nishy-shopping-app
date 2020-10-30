@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserra&display=swap");
 html{
   font-size: 64.5%;
   box-sizing: border-box;
@@ -9,7 +10,11 @@ body,
 }
 body,input,select,textarea{
   font-size: 1.6rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Monsterrat,Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
 }
 .grid-container{
   display: grid;
@@ -80,7 +85,7 @@ footer{
 
 }
 .products li{
-  flex: 1 1 29rem;
+  flex: 0 1 29rem;
   height: 47rem;
   padding: 1rem;
   margin: 1rem;
@@ -125,6 +130,6 @@ footer{
 }
 
 .button.primary{
-  background-color: #ff8000;
+  background-color: #f0c040;
 }
 
