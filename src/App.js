@@ -12,15 +12,29 @@ class App extends React.Component{
       size:"",
       sort:"",
       sex:"",
-      cardItems:[]
+      males:[],
+      females:[],
+      cardItems:localStorage.getItem("cartItems")?JSON.parse(localStorage.getItem("cartItems")):[]
     };
     
   }
+  sortSex=(event)=>{
+
+    const sex = event.target.value;
+    const pro= this.state.products;
+ 
+    this.state.males= data.products.filter( (pro)=>sex==pro.sex)
+    this.setState({
+     products:this.state.males
+    })
+  
+}
   
   removeFromCart=(product)=>{
     const cardItems= this.state.cardItems.slice();
-    this.setState({cardItems:cardItems.filter(x=>x._id !== product._id)})
-    
+    this.setState({
+      cardItems:cardItems.filter(x=>x._id !== product._id)})
+    localStorage.setItem("cartItems",JSON.stringify(cardItems.filter(x=>x._id !== product._id)));
 
   }
   addToCart=(product)=>{
@@ -36,21 +50,11 @@ class App extends React.Component{
       cardItems.push({...product,count:1})
     }
     this.setState({cardItems})
+    localStorage.setItem("cartItems",JSON.stringify(cardItems));
 
 
   }
-  sortSex=(event)=>{
-    // const sex = event.target.value;
-    // console.log(event.target.value)
-   
-    // if(event.target.value == "male"){
-    //   this.setState(this.state.products.find(sex="male"))
-    // }else if(event.target.value == "female") {
-    //   this.setState(this.state.products.find(sex="female"))
-    // }
-     
-   
-  }
+  
   sortProducts=(event)=>{
     const sort =event.target.value
     console.log(event.target.value)
@@ -98,6 +102,7 @@ class App extends React.Component{
               <Filter count={this.state.products.length}
               size={this.state.size}
               sort={this.state.sort}
+              sex={this.state.sex}
               filterProducts={this.filterProducts}
               sortProducts={this.sortProducts}
               sortSex={this.sortSex}
