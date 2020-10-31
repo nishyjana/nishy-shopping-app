@@ -13,14 +13,14 @@ export default class Filter extends Component {
               <option value="highest">Hightest</option>
               
         </select></div>
-        {/* <div  className="filter-sex"> CATEGORY{"   "}
-        <select value={this.props.sex} onChange={this.props.sortSex}>
+        <div  className="filter-sex"> CATEGORY{"   "}
+        <select  onChange={this.props.sortSex}>
               
-              <option >ALL</option>
+              <option value=""></option>
               <option value="male">GENTS</option>
               <option value="female">LADIES</option>
               
-        </select></div> */}
+        </select></div>
     <div  className="filter-size">Filter {"   "}
         <select value={this.props.size} onChange={this.props.filterProducts}>
               <option value="">ALL</option>
