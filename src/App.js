@@ -14,7 +14,7 @@ class App extends React.Component{
       sort:"",
       sex:"",
       males:[],
-      females:[],
+      
       cardItems:localStorage.getItem("cartItems")?JSON.parse(localStorage.getItem("cartItems")):[]
     };
     
@@ -25,7 +25,7 @@ class App extends React.Component{
   sortSex=(event)=>{
 
     const sex = event.target.value;
-    const pro= this.state.products;
+    
  
     this.state.males= data.products.filter( (pro)=>sex==pro.sex)
     this.setState({
@@ -104,14 +104,15 @@ class App extends React.Component{
           <div className="content">
             <div className="main">
               <Filter count={this.state.products.length}
-              size={this.state.size}
+            
               sort={this.state.sort}
               sex={this.state.sex}
-              filterProducts={this.filterProducts}
-              sortProducts={this.sortProducts}
-              sortSex={this.sortSex}
+              size={this.state.size}
+             
               
-              >
+              sortSex={this.sortSex}
+              filterProducts={this.filterProducts}
+              sortProducts={this.sortProducts}>
                 
               </Filter>
               <Product   
