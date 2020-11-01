@@ -4,6 +4,7 @@ import data from './data.json';
 import Filter from "./components/Filter";
 import Cart from './components/card';
 
+
 class App extends React.Component{
   constructor(){
     super();
@@ -17,6 +18,9 @@ class App extends React.Component{
       cardItems:localStorage.getItem("cartItems")?JSON.parse(localStorage.getItem("cartItems")):[]
     };
     
+  }
+  createOrders=(order)=>{
+    alert("Need to save order for  " +order.name)
   }
   sortSex=(event)=>{
 
@@ -115,12 +119,16 @@ class App extends React.Component{
               addToCart={this.addToCart}
               ></Product>
               </div>
-            <div className="sidebar">
+              <div className="sidebar">
               <Cart cardItems={this.state.cardItems}
-               removeFromCart={this.removeFromCart}></Cart> </div>
+               removeFromCart={this.removeFromCart}
+               createOrders={this.createOrders}>
+                 create</Cart> </div>
+    
+           
             
           </div>
-    
+          
         </main>
         <footer>
           All Rights Reserverd <br></br>
