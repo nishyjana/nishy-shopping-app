@@ -205,3 +205,48 @@ margin: 3rem;
 
 flex-direction: column;
 }
+.closebtn{
+  justify-content: right;
+  
+  background-color: #f10424;
+  flex-direction: row;
+
+}
+.close-title{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+  font-size: larger;
+  font-family: cursive;
+  
+
+}
+
+
+.mpic {
+ 
+}
+
+/* resize images */
+.mpic img {
+  width: 70%;
+  height: auto;
+  width: 60vh;
+  height: 46rem;
+  margin: 0;
+ 
+}
+.mpic-detail{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  max-height: 96vh;
+   bottom: 0;
+    right: 0;
+    
+     width: 400px;
+      text-align:right;
+}

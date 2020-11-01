@@ -56,7 +56,10 @@ export default class card extends Component {
                                     {cardItems.title}
                                     <div className="right">
                                     {formatCurrency (  item.price)} x {item.count}{" "} 
-                                    <button onClick={()=>{this.props.removeFromCart(item)}}>REMOVE</button>
+                                    <Fade left cascade>
+                                      <button onClick={()=>{this.props.removeFromCart(item)}}>REMOVE</button>
+                                      </Fade>
+ 
                                     </div>
                                 </div>
                               
