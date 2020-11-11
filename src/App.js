@@ -3,6 +3,8 @@ import Product from './components/products';
 import data from './data.json';
 import Filter from "./components/Filter";
 import Cart from './components/card';
+import store from './store/store';
+import {Provider} from 'react-redux'
 
 
 class App extends React.Component{
@@ -27,7 +29,7 @@ class App extends React.Component{
     const sex = event.target.value;
     
  
-    this.state.males= data.products.filter( (pro)=>sex==pro.sex)
+    this.state.males= data.products.filter( (pro)=>sex===pro.sex)
     this.setState({
      products:this.state.males
     })
@@ -96,7 +98,8 @@ class App extends React.Component{
   }
   render(){
     return (
-      <div className="grid-container">
+      <Provider store={store}>
+        <div className="grid-container">
         <header>
           <a href="/">NISHY SHOPPING</a> 
         </header>
@@ -135,6 +138,7 @@ class App extends React.Component{
           All Rights Reserverd <br></br>
         </footer>
       </div>
+      </Provider>
     );
   }
 
